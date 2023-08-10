@@ -49,19 +49,20 @@ export = MidiParser;
 
 export interface MidiData {
   formatType: 0 | 1 | 2;
+  /**
+   * The number of ticks per quarter note.
+   */
   timeDivision: number;
   tracks: number;
   track: MidiTrack[];
 }
 
-export interface MidiHeader {
+export interface MidiEvent {
   data: string;
   deltaTime: number;
   metaType: number;
   type: number;
 }
-
-export interface MidiEvent {}
 
 export type MidiTrack = {
   event: MidiEvent[];
