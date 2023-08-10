@@ -45,7 +45,7 @@ declare const MidiParser: {
   customInterpreter: null | CustomInterpreter;
 };
 
-export default MidiParser;
+export = MidiParser;
 
 export interface MidiData {
   formatType: 0 | 1 | 2;
