@@ -6,7 +6,7 @@ export type CustomInterpreter = (
 
 // generate types from src/main.js
 
-type MidiParser = {
+declare const MidiParser: {
   /**
    * When enabled will log in console unimplemented events
    * warnings and internal handled errors.
