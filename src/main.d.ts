@@ -6,12 +6,12 @@ export type CustomInterpreter = (
 
 // generate types from src/main.js
 
-export default class MidiParser {
+type MidiParser = {
   /**
    * When enabled will log in console unimplemented events
    * warnings and internal handled errors.
    */
-  private debug: boolean;
+  debug: boolean;
 
   static parse(
     data: Uint8Array | string | HTMLElement,
@@ -43,7 +43,9 @@ export default class MidiParser {
   Uint8(FileAsUint8Array: Uint8Array): MidiData;
 
   customInterpreter: null | CustomInterpreter;
-}
+};
+
+export default MidiParser;
 
 export interface MidiData {
   formatType: 0 | 1 | 2;
